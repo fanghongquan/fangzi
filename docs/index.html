@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>打字练习 — 中文打字练习</title>
+    <meta
+      name="description"
+      content="中文打字练习 — 用拼音输入法练习打字，统计字/分钟与准确率，无需注册。"
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="oklch(0.150 0.012 250)" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="mask-icon" href="./favicon.svg" color="#5fd1d8" />
+
+    <!-- Pre-fetch the default typewriter sound sprite. The Web Audio
+         path can't decode it without a user gesture, but we can have
+         the bytes in cache so decode-on-first-keystroke is instant
+         instead of waiting on a 600 KB download.
+         `rel="prefetch"` (not `preload`) on purpose: preload demands the
+         resource be consumed within a few seconds or Chrome logs a
+         "preloaded but not used" warning. The file is intentionally
+         dormant until the first keystroke, which may be many seconds
+         away. Prefetch warms the HTTP cache without that requirement. -->
+    <link
+      rel="prefetch"
+      href="./sounds/typewriter.ogg"
+      crossorigin="anonymous"
+    />
+
+    <!-- Geist + Geist Mono are self-hosted under /fonts/ (see src/ui/fonts.css).
+         Preload the two weights used above the fold (400 body, 500 medium)
+         so the first paint already has the real font. -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/geist-sans-latin-400-normal.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/geist-mono-latin-500-normal.woff2"
+      crossorigin
+    />
+
+    <!-- Pre-paint theme bootstrap. Kept as an external script (not inline)
+         so the strict CSP `script-src 'self'` holds without a hash. -->
+    <script src="./theme-init.js"></script>
+    <script type="module" crossorigin src="./assets/index-DNhKWdmQ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-3X3G0xJO.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding: 40px; font-family: ui-monospace, monospace">
+        <h1>打字练习</h1>
+        <p style="opacity: 0.7">中文打字练习</p>
+        <p>本打字练习需要 JavaScript 才能捕获按键。</p>
+      </div>
+    </noscript>
+  </body>
+</html>
